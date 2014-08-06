@@ -62,6 +62,8 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 		return Orientation.VERTICAL;
 	}
 
+
+
 	@Override
 	protected void onRefreshing(final boolean doScroll) {
 		/**
@@ -333,5 +335,9 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 		}
 
 	}
+
+    public void smoothScrollToTop() {
+       mRefreshableView.smoothScrollToPosition(0);
+    }
 
 }
